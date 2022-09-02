@@ -1,6 +1,17 @@
 # ninja log v5
-7	1059	6824878495337367	CMakeFiles/DoublyLinkedList.dir/main.cpp.obj	8380161414b8aa3e
-1060	1206	6824878496776340	DoublyLinkedList.exe	37ddeb5abe65b7bd
-4	532	6824879516561730	build.ninja	d04ad3aa5ba1d87d
-45	1675	6824879571191665	CMakeFiles/DoublyLinkedList.dir/main.cpp.obj	84efc9ff9a07274c
-1677	1942	6824879573849862	DoublyLinkedList.exe	37ddeb5abe65b7bd
+5	308	6825663703779313	CMakeFiles/DoublyLinkedList.dir/main.cpp.obj	84efc9ff9a07274c
+308	385	6825663704537070	DoublyLinkedList.exe	37ddeb5abe65b7bd
+4	532	6837947378589291	build.ninja	d04ad3aa5ba1d87d
+18	228	6837947160954839	CMakeFiles/DoublyLinkedList.dir/Graph/Vertex.cpp.obj	52edb97ba82c8dcf
+14	230	6837947160954839	CMakeFiles/DoublyLinkedList.dir/Graph/Edge.cpp.obj	acfe9aa283d644db
+23	540	6837947164084252	CMakeFiles/DoublyLinkedList.dir/LinkedList/LLTest.cpp.obj	c7d2210968a59818
+5	374	6837947482654501	CMakeFiles/DoublyLinkedList.dir/LinkedList/LLTest.cpp.obj	c7d2210968a59818
+374	626	6837947485145201	DoublyLinkedList.exe	d79e68051e34c397
+4	405	6837947916798196	CMakeFiles/DoublyLinkedList.dir/LinkedList/LLTest.cpp.obj	c7d2210968a59818
+406	526	6837947917968525	DoublyLinkedList.exe	d79e68051e34c397
+4	400	6837948490042546	CMakeFiles/DoublyLinkedList.dir/LinkedList/LLTest.cpp.obj	c7d2210968a59818
+401	520	6837948491178203	DoublyLinkedList.exe	d79e68051e34c397
+4	459	6837949251995628	CMakeFiles/DoublyLinkedList.dir/LinkedList/LLTest.cpp.obj	c7d2210968a59818
+460	586	6837949253226686	DoublyLinkedList.exe	d79e68051e34c397
+8	448	6837949569415445	CMakeFiles/DoublyLinkedList.dir/LinkedList/LLTest.cpp.obj	c7d2210968a59818
+449	582	6837949570700272	DoublyLinkedList.exe	d79e68051e34c397

@@ -4,6 +4,8 @@
 
 #ifndef DOUBLYLINKEDLIST_LINKEDLIST_H
 #define DOUBLYLINKEDLIST_LINKEDLIST_H
+
+#include <cmath>
 #include "iostream"
 
 template <typename T>
@@ -154,7 +156,7 @@ public:
             q->setPrev(p->getPrev());
             q->setNext(p);
             if(tempQ->getPrev())
-            tempQ->getPrev()->setNext(p);
+                tempQ->getPrev()->setNext(p);
             p->setNext(tempQ->getNext());
             p->setPrev(tempQ->getPrev());
             if(!q->getNext())
@@ -259,6 +261,8 @@ int deleteNode(Node<T>* node){
         if(p) return index;
         return 0;
     }
+
+    //getters and setters and prints
     Node<T> *getHead() const {
         return head;
     }
@@ -288,14 +292,6 @@ int deleteNode(Node<T>* node){
         while(p) {
             std::cout << "[ " << p->getValue() << " ]" << std::endl;
             p = p->getNext();
-        }
-    }
-
-    void printFromTail(){
-        auto p=tail;
-        while(p) {
-            std::cout << "[ " << p->getValue() << " ]" << std::endl;
-            p = p->getPrev();
         }
     }
 

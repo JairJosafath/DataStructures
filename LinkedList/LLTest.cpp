@@ -9,12 +9,22 @@
 int main() {
     auto  list= new LinkedList<int>();
     list->addNode(1);
-    list->addNodeBefore(list->getHead(),233);
     list->addNode(7);
     list->addNode(700);
-    list->addNodeAsHead(-12);
-    list->swapNodes(0,list->getSize()-1);
-    list->print();
+//    list->addNodeAfter(list->getHead(),233);
+    list->addNode(-12);
+    list->addNode(-1);
+    list->addNode(8);
+//    list->printFromTail();
+//    std::cout<<"====="<<std::endl;
+    list->print();    std::cout<<"====="<<std::endl;
+
+    list->deleteNode(1);
+    list->print(); std::cout<<"====="<<std::endl;  list->printFromTail();
+
+//list->getNodeAt(2)->print();
+
+
     delete list;
     return 0;
 }

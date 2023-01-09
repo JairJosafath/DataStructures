@@ -5,7 +5,6 @@
 #ifndef DOUBLYLINKEDLIST_LINKEDLIST_H
 #define DOUBLYLINKEDLIST_LINKEDLIST_H
 
-#include <cmath>
 #include "iostream"
 
 template <typename T>

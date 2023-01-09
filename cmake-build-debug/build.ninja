@@ -85,6 +85,39 @@ build DoublyLinkedList.exe: CXX_EXECUTABLE_LINKER__DoublyLinkedList_Debug CMakeF
   TARGET_IMPLIB = libDoublyLinkedList.dll.a
   TARGET_PDB = DoublyLinkedList.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Stack
+
+
+#############################################
+# Order-only phony target for Stack
+
+build cmake_object_order_depends_target_Stack: phony || CMakeFiles/Stack.dir
+
+build CMakeFiles/Stack.dir/Stack/StackTest.cpp.obj: CXX_COMPILER__Stack_Debug C$:/Users/jairj/CLionProjects/DataStructures/Stack/StackTest.cpp || cmake_object_order_depends_target_Stack
+  DEP_FILE = CMakeFiles\Stack.dir\Stack\StackTest.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Stack.dir
+  OBJECT_FILE_DIR = CMakeFiles\Stack.dir\Stack
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Stack
+
+
+#############################################
+# Link the executable Stack.exe
+
+build Stack.exe: CXX_EXECUTABLE_LINKER__Stack_Debug CMakeFiles/Stack.dir/Stack/StackTest.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Stack.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Stack.exe
+  TARGET_IMPLIB = libStack.dll.a
+  TARGET_PDB = Stack.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -95,6 +128,39 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Queue
+
+
+#############################################
+# Order-only phony target for Queue
+
+build cmake_object_order_depends_target_Queue: phony || CMakeFiles/Queue.dir
+
+build CMakeFiles/Queue.dir/Queue/QueueTest.cpp.obj: CXX_COMPILER__Queue_Debug C$:/Users/jairj/CLionProjects/DataStructures/Queue/QueueTest.cpp || cmake_object_order_depends_target_Queue
+  DEP_FILE = CMakeFiles\Queue.dir\Queue\QueueTest.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Queue.dir
+  OBJECT_FILE_DIR = CMakeFiles\Queue.dir\Queue
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Queue
+
+
+#############################################
+# Link the executable Queue.exe
+
+build Queue.exe: CXX_EXECUTABLE_LINKER__Queue_Debug CMakeFiles/Queue.dir/Queue/QueueTest.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Queue.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Queue.exe
+  TARGET_IMPLIB = libQueue.dll.a
+  TARGET_PDB = Queue.exe.dbg
 
 
 #############################################
@@ -113,6 +179,10 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build DoublyLinkedList: phony DoublyLinkedList.exe
 
+build Queue: phony Queue.exe
+
+build Stack: phony Stack.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -121,7 +191,7 @@ build DoublyLinkedList: phony DoublyLinkedList.exe
 #############################################
 # Folder: C:/Users/jairj/CLionProjects/DataStructures/cmake-build-debug
 
-build all: phony DoublyLinkedList.exe
+build all: phony DoublyLinkedList.exe Stack.exe Queue.exe
 
 # =============================================================================
 # Built-in targets

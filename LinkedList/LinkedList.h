@@ -182,7 +182,6 @@ public:
     }
 //    perform a swap takes 12 lines
     int normalSwap(int index1,int index2){
-        std::cout<<"normal"<<std::endl;
         auto p = getNodeAt(index1);
         auto q = getNodeAt(index2);
         auto temp = new Node<T>();
@@ -237,7 +236,6 @@ public:
     }
 //    swap with head
     int swapWithHead(int index){
-        std::cout<<"with head"<<std::endl;
         auto p = getNodeAt(index);
         if(index==1){
             p->setPrev(nullptr);
@@ -266,7 +264,6 @@ public:
     }
     //swap with tail 7steps
     int swapWithTail(int index){
-        std::cout<<"with tail"<<std::endl;
         auto p = getNodeAt(index);
         tail->setNext(p->getNext());
         p->setNext(nullptr);
@@ -282,7 +279,6 @@ public:
     }
     //swap adjacent 6 steps
     int swapAdjacent(int index1,int index2){
-        std::cout<<"adjacent"<<std::endl;
         auto p = getNodeAt(index1);
         auto q = getNodeAt(index2);
 //        determine if p or q is on the left hand side
@@ -374,8 +370,8 @@ return 0;
         return swapNodes(getIndex(val1), getIndex(val2));
     };
 int deleteNode(int index){
-    if(size==0||index>size-1)return 0;
-    if(size==1&&index==0){head=tail= nullptr;return 0;}
+    if(size<=0||index>=size)return 0;
+    if(size==1&&index==0){head=tail= nullptr;size=0;return 0;}
     if(index==0){
         head->getNext()->setPrev(nullptr);
         head=head->getNext();
@@ -455,16 +451,23 @@ int deleteNode(Node<T>* node){
 
     void print(){
         auto p=head;
+        std::cout<<"List Preview==========="<<std::endl;
         while(p) {
-            std::cout << "[ " << p->getValue() << " ]" << std::endl;
+            std::cout << (p==head?"\nnull<-[Head: ":"=>[ ") << p->getValue() << (p==tail?" :Tail]->null":" ]<");
             p = p->getNext();
+        }
+
+        p=tail;
+        while(p) {
+            std::cout << (p==tail?"\nnull<-[Tail: ":"=>[ ") << p->getValue() << (p==head?" :Head]->null\n\n":" ]<");
+            p = p->getPrev();
         }
     }
 
     void printFromTail(){
         auto p=tail;
         while(p) {
-            std::cout << "[ " << p->getValue() << " ]" << std::endl;
+            std::cout << (p==tail?"\nnull<-[Tail: ":"=>[ ") << p->getValue() << (p==head?" :Head]->null\n\n":" ]<");
             p = p->getPrev();
         }
     }
